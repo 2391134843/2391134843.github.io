@@ -9,6 +9,55 @@
   <META http-equiv="Content-Type" content="text/html;charset=utf-8">
   <LINK href="jemdoc.css" rel="stylesheet" type="text/css">
   <TITLE>Linyu Li</TITLE>
+
+  
+<!-- ===== Static News – drag-to-scroll ===== -->
+<!-- ===== Custom Left Scrollbar ===== -->
+<style>
+  .news-section{
+    background:#f5f5f5;
+    border-radius:6px;
+    padding:12px 14px 12px 30px;   /* ⬅ 给左侧预留 30px */
+    margin:18px 0;
+    font-size:0.95em;
+    line-height:1.8em;
+    position:relative;
+  }
+  
+  /* 滚动区域（与上次相同，只删掉 cursor 样式即可） */
+  .news-scroll{
+    max-height:210px;
+    overflow:auto;
+    scroll-behavior:smooth;
+    position:relative;
+  }
+  
+  /* ——— 自定义轨道 & 把手 ——— */
+  .news-track{
+    position:absolute; left:8px;          /* 与 padding-left 对应 */
+    top:0; bottom:0; width:6px;
+    background:#e0e0e0;
+    border-radius:3px;
+  }
+  .news-handle{
+    position:absolute; left:0;
+    width:100%;
+    height:40px;                          /* 初始把手长度，会被 JS 调整 */
+    background:#9ab4ff;
+    border-radius:3px;
+    cursor:pointer;
+    user-select:none;
+  }
+  
+  /* 鼠标拖动时视觉反馈 */
+  .news-handle.dragging{ background:#6c8dff; }
+  </style>
+  
+  <!-- ===== Static News – drag-to-scroll ===== -->
+
+  
+  
+  
 </HEAD>
 
 <BODY>
@@ -47,13 +96,37 @@
       <P>Knowledge Graph Completion/Representation Learning、 Applications of Knowledge Graphs、 Deep Learning and
         requirements Engineering.</P>
 
-      <!-- <H2><B>Internship Opportunity</B></H2>
-<P style="color:blue"> We are hiring research interns! If you are interested in large language models (LLM), feel free to contact me!</P> -->
+        <!-- ===== News Ticker ===== -->
+        <H2>News:</H2>
+        <div class="news-section">
+          <div class="news-title">News:</div>
+        
+          <!-- 左侧轨道 & 把手 -->
+          <div class="news-track">
+            <div class="news-handle" id="newsHandle"></div>
+          </div>
+        
+          <!-- 滚动内容区（保持原样） -->
+          
+          <div class="news-scroll" id="newsScroll">
+            <div class="news-list">
+              <div class="news-item">
+                <span class="date">[2025.08]</span> One paper has been accepted by Expert Systems With Applications (ESWA).
+              </div>
+            </div>
+          </div>
+          <a href="#" class="news-more" id="newsToggle">MORE</a>
+        </div>
+        
 
-      <!-- <H2>News</H2>
-<ul>
-  <li>2019-09: joined Tencent as a Senior Researcher.</li>
-</ul> -->
+        
+
+        
+
+        
+        
+
+
       <H2>Selected Publications [<A href="https://scholar.google.com/citations?user=i8vyw3QAAAAJ&hl=zh-CN&oi=sra">Full
           List</A>]</H2>
       <UL>
@@ -71,10 +144,18 @@
             <I>IEEE Transactions on Multimedia 2025 (SCI,JCR Q1 Top, CCF-B, IF: 8.6).</I><BR>
           </P>
         </LI>
+      </UL> 	
+      <UL>
+        <LI>
+          <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Yichi Zhang, Haoran Duan,Xuan Zhang, Nyima Tashi.
+            Learning to Evolve: Bayesian-Guided Continual Knowledge Graph Embedding.<BR>
+            <I>ArXiv preprint 2025.</I><BR>
+          </P>
+        </LI>
       </UL>
       <UL>
           <LI>
-            <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, , Haoran Duan, Zhengwei Tao, Xuan Zhang, Jiandong Li.
+            <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Haoran Duan, Zhengwei Tao, Xuan Zhang, Jiandong Li.
               Rethinking Regularization Methods for Knowledge Graph Completion.<BR>
               <I>ArXiv preprint 2025.</I><BR>
             </P>
@@ -116,97 +197,6 @@
           </P>
         </LI>
       </UL>
-      <!-- <UL>
-        <LI>
-          <P>Chen Gao, Xuan Zhang*, <B>LinYu Li</B>, JinHong Li, Rui Zhu, KunPeng Du, Qiuying Ma.
-            ERGM: A Multi-Stage Joint Entity and Relation Extraction with Global Entity Match.<BR>
-            <I>Knowledge-based Systems 2023 (SCI,JCR Q1 Top, CCF-C, IF: 8.8)</I><BR>
-          </P>
-        </LI>
-      </UL>
-      <UL>
-        <LI>
-          <P>Jishu Wang, Yaowei Wang, Xuan Zhang*, Zhi Jin,Chao Zhu, <B>Linyu Li</B>, Rui Zhu, Shenglong Lv.
-            LearningChain: A Highly Scalable and Applicable Learning-Based Blockchain Performance Optimization
-            Framework.<BR>
-            <I>IEEE TRANSACTIONS ON NETWORK AND SERVICE MANAGEMENT 2024.(SCI,JCR Q2, CCF-C, IF: 5.6)</I><BR>
-          </P>
-        </LI>
-      </UL>
-      <UL>
-        <LI>
-          <P>YuBin Ma, Xuan Zhang*, Chen Gao, Yahui Tang, <B>Linyu Li</B>, Rui Zhu, Chunlin Yin.
-            Enhancing Recommendations with Contrastive Learning from Collaborative Knowledge Graph.<BR>
-            <I>Neurocomputing 2023 (SCI,JCR Q2 Top, CCF-C, IF: 6)</I><BR>
-
-          </P>
-        </LI>
-      </UL>
-      <UL>
-        <LI>
-          <P>Baolei Wang, Xuan Zhang*, Kunpeng Du, Chen Gao, <B>Linyu Li</B>.
-            Multimodal Sentiment Analysis under modality deficiency with prototype-Augmentation in software
-            engineering.<BR>
-            <I>2023 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER-2023 EI,
-              CCF-B).</I><BR>
-
-          </P>
-        </LI>
-      </UL>
-
-      <UL>
-        <LI>
-          <P>Baolei Wang, Xuan Zhang*, JiShu Wang, Chen Gao, Qing Duan, <B>LinYu Li</B>.
-            Cyst-MMET: Fine-grained cyber security entity typing based on multimodal representation learning.<BR>
-            <I>Multimedia Tools and Applications 2023 (SCI,JCR Q2, CCF-C, IF: 3.6).</I><BR>
-          </P>
-        </LI>
-      </UL> -->
-      <!-- <H2>Under Review </H2> -->
-
-
-      <!-- <UL>
-  <LI>
-  <P>Kunpeng Du, Xuan Zhang*, Chen Gao, Rui Zhu, Yunbing Ma, <B>Linyu Li</B>.
-    Knowledge-enhanced Prototypical Network with Graph Structure and Semantic Information-Interactive for Low-shot Joint Spoken Language Understanding.<B>(Under Review)</B>.<BR>
-    <I>IEEE Transactions on Neural Networks and Learning Systems.</I><BR>
-   </P>
-  </LI>
-</UL> -->
-
-      <!-- <UL>
-  <LI>
-  <P>Chen Gao, Xuan Zhang*, Zhi Jin, Weiyi Shang, Yubing Ma, <B>Linyu Li</B>, Zishuo Ding, Yuqin Liang.
-    Knowledge-enhanced Prototypical Network with Graph Structure and Semantic Information-Interactive for Low-shot Joint Spoken Language Understanding.<B>(Under Review)</B><BR>
-    <I>IEEE Transactions on Neural Networks and Learning Systems.</I><BR>
-   </P>
-  </LI>
-</UL>-->
-      <!-- <UL> 
-  <LI>
-  <P>Haoran Duan,Cheng Xie*,<B>Linyu Li</B>. 
-    Reserving-Masking-Reconstruction Model for Self-Supervised Heterogeneous Graph Representation.<B>(Under Review)</B><BR>
-    <I>International World Wide Web Conferences(WWW-2024).</I><BR>
-   </P>
-  </LI>
-</UL>
-<UL>
-  <LI>
-  <P>Yubin Ma, Xuan Zhang*, Zhi Jin, WeiYi Shang, Chen Gao, <b>LinYu Li</b>, ZhiHong Zheng.
-    Using external knowledge to enhance user preferences for better sequential recommendation.<B>(Major revision)</B><BR>
-    <I>Expert Systems With Applications.</I><BR>
-   </P>
-  </LI>
-</UL>
-<UL>
-  <LI>
-  <P>Jishu Wang,Yaowei Wang,Xuan Zhang,Tong Li,Xue Wang,<B>Linyu Li</B>,Rui Zhu,Shenglong Lv.
-    PRPSV: A Real-Time and Efficient Parking Reservation Framework Based on Parking Space View.<B>(Under Review)</B><BR>
-    <I>IEEE Transactions on Intelligent Transportation Systems.</I><BR>
-   </P>
-  </LI>
-</UL> -->
-
 
 
 
@@ -258,36 +248,7 @@
         <div style="float:left;"><strong>Presented at the NCIIP Conference</strong> </div>
         <div style="float:right;">May 2025, Guangzhou, China </div>
       </div>
-      <!-- <h2>Invited Talks</h2>
-      <div style="display: flex; flex-direction: column; gap: 0.3em; margin-bottom: 0.6em;">
-        <div><strong>Presented at the NCIIP Conference</strong></div>
-        <div>May 2025, Guangzhou, China</div>
-      </div> -->
 
-      <!-- <div style="overflow:hidden;margin-bottom: 0.6em">
-      <div style="float:left;">No.1 in OGB ogbl-wikikg2 challenge</div>
-      <div style="float:right;">2023</div>
-     </div>
-
-    <div style="overflow:hidden;margin-bottom: 0.6em">
-     <div style="float:left;">No.1 in OGB ogbl-collab challenge</div>
-     <div style="float:right;">2022</div>
-    </div>
-
-    <div style="overflow:hidden;margin-bottom: 0.6em">
-     <div style="float:left;">Overseas High-Caliber Personnel in Shenzhen</div>
-     <div style="float:right;">2020</div>
-    </div>
-
-    <div style="overflow:hidden;margin-bottom: 0.6em">
-     <div style="float:left;">Excellent Graduate Student of Zhejiang University</div>
-     <div style="float:right;">2013, 2015, 2016</div>
-    </div>
-
-    <div style="overflow:hidden;margin-bottom: 0.6em">
-     <div style="float:left;">Outstanding Student of Sichuan University</div>
-     <div style="float:right;">2009</div>
-    </div> -->
       <H2>Selected Projects</H2>
       <div style="overflow:hidden;margin-bottom: 0.6em">
         <div style="float:left;">Yunnan Provincial Department of Education Scientific Research Fund Project<b>
@@ -306,11 +267,101 @@
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F2391134843.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" /></a> -->
       <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2F2391134843.github.io%2F&label=&icon=github&color=%23198754">
 
-        </br><I>last update: 2025-5</I>
+        </br><I>last update: 2025-8</I>
       <!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fyao8839836.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
 
     </DIV>
   </DIV>
+
+  <script>
+    (function(){
+      var box    = document.getElementById('newsScroll');
+      var handle = document.getElementById('newsHandle');
+      var track  = handle.parentElement;
+      var link   = document.getElementById('newsToggle');
+      var expanded = false;
+    
+      /* ===== ① 根据内容高度动态设置把手长度 ===== */
+      function updateHandle(){
+        var ratio = box.clientHeight / box.scrollHeight;
+        /* 最短 25px，最长接近轨道 */
+        var h = Math.max(track.clientHeight * ratio, 25);
+        handle.style.height = h + 'px';
+        updateHandlePos();           // 同步位置
+      }
+    
+      /* ===== ② 滚动内容时同步把手位置 ===== */
+      function updateHandlePos(){
+        var maxScroll = box.scrollHeight - box.clientHeight;
+        var maxMove   = track.clientHeight - handle.offsetHeight;
+        var top = (box.scrollTop / maxScroll) * maxMove;
+        handle.style.top = top + 'px';
+      }
+    
+      box.addEventListener('scroll', updateHandlePos, false);
+      window.addEventListener('resize', updateHandle, false);
+    
+      /* ===== ③ 拖动把手滚动内容 ===== */
+      let startY, startTop, dragging=false;
+    
+      function onDragStart(e){
+        dragging = true;
+        handle.classList.add('dragging');
+        startY = (e.touches ? e.touches[0].clientY : e.clientY);
+        startTop = parseFloat(handle.style.top) || 0;
+        e.preventDefault();
+      }
+      function onDragMove(e){
+        if(!dragging) return;
+        var y = (e.touches ? e.touches[0].clientY : e.clientY);
+        var delta = y - startY;
+        var maxMove = track.clientHeight - handle.offsetHeight;
+        var newTop = Math.min(Math.max(startTop + delta, 0), maxMove);
+        handle.style.top = newTop + 'px';
+    
+        /* 同步内容滚动 */
+        var ratio = newTop / maxMove;
+        var maxScroll = box.scrollHeight - box.clientHeight;
+        box.scrollTop = ratio * maxScroll;
+      }
+      function onDragEnd(){
+        dragging = false;
+        handle.classList.remove('dragging');
+      }
+    
+      handle.addEventListener('mousedown', onDragStart, false);
+      document.addEventListener('mousemove',  onDragMove, false);
+      document.addEventListener('mouseup',    onDragEnd,  false);
+    
+      handle.addEventListener('touchstart', onDragStart, {passive:false});
+      document.addEventListener('touchmove',  onDragMove, {passive:false});
+      document.addEventListener('touchend',   onDragEnd,  false);
+    
+      /* ===== ④ MORE/LESS 展开收起逻辑（与上次一致） ===== */
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        expanded = !expanded;
+        if(expanded){
+          box.classList.add('expanded');
+          box.style.maxHeight = 'none';
+          link.innerHTML = 'LESS';
+        }else{
+          box.classList.remove('expanded');
+          box.style.maxHeight = '210px';
+          link.innerHTML = 'MORE';
+          box.scrollTo({top:0, behavior:'smooth'});
+        }
+        /* 内容高度变了，需重新计算把手 */
+        updateHandle();
+      });
+    
+      /* ===== 初始化 ===== */
+      updateHandle();
+    })();
+    </script>
+    
+    
+    
 </BODY>
 
   
