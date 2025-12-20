@@ -10,54 +10,64 @@
   <LINK href="jemdoc.css" rel="stylesheet" type="text/css">
   <TITLE>Linyu Li</TITLE>
 
-  
-<!-- ===== Static News – drag-to-scroll ===== -->
-<!-- ===== Custom Left Scrollbar ===== -->
-<style>
-  .news-section{
-    background:#f5f5f5;
-    border-radius:6px;
-    padding:12px 14px 12px 30px;   /* ⬅ 给左侧预留 30px */
-    margin:18px 0;
-    font-size:0.95em;
-    line-height:1.8em;
-    position:relative;
-  }
-  
-  /* 滚动区域（与上次相同，只删掉 cursor 样式即可） */
-  .news-scroll{
-    max-height:210px;
-    overflow:auto;
-    scroll-behavior:smooth;
-    position:relative;
-  }
-  
-  /* ——— 自定义轨道 & 把手 ——— */
-  .news-track{
-    position:absolute; left:8px;          /* 与 padding-left 对应 */
-    top:0; bottom:0; width:6px;
-    background:#e0e0e0;
-    border-radius:3px;
-  }
-  .news-handle{
-    position:absolute; left:0;
-    width:100%;
-    height:40px;                          /* 初始把手长度，会被 JS 调整 */
-    background:#9ab4ff;
-    border-radius:3px;
-    cursor:pointer;
-    user-select:none;
-  }
-  
-  /* 鼠标拖动时视觉反馈 */
-  .news-handle.dragging{ background:#6c8dff; }
+
+  <!-- ===== Static News – drag-to-scroll ===== -->
+  <!-- ===== Custom Left Scrollbar ===== -->
+  <style>
+    .news-section {
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 12px 14px 12px 30px;
+      /* ⬅ 给左侧预留 30px */
+      margin: 18px 0;
+      font-size: 0.95em;
+      line-height: 1.8em;
+      position: relative;
+    }
+
+    /* 滚动区域（与上次相同，只删掉 cursor 样式即可） */
+    .news-scroll {
+      max-height: 210px;
+      overflow: auto;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    /* ——— 自定义轨道 & 把手 ——— */
+    .news-track {
+      position: absolute;
+      left: 8px;
+      /* 与 padding-left 对应 */
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: #e0e0e0;
+      border-radius: 3px;
+    }
+
+    .news-handle {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      /* 初始把手长度，会被 JS 调整 */
+      background: #9ab4ff;
+      border-radius: 3px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* 鼠标拖动时视觉反馈 */
+    .news-handle.dragging {
+      background: #6c8dff;
+    }
   </style>
-  
+
   <!-- ===== Static News – drag-to-scroll ===== -->
 
-  
-  
-  
+
+
+
 </HEAD>
 
 <BODY>
@@ -74,20 +84,23 @@
           href="https://www.researchgate.net/profile/Linyu-Li-9?_sg=xhcZvM9qZ_NoNkzoJTjT49WuItPoJ2XE86zJ2b-5bO8Z7xAeoeXzcET4zT7VZ8ankfmzfe8A5IqDWRA&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">Researchgate</A>]
         [<A href="https://scholar.google.com/citations?user=i8vyw3QAAAAJ&hl=zh-CN&oi=sra">Google Scholar</A>] [<A
           href="https://orcid.org/0009-0005-8626-0608">ORCID</A>] </P>
-      <P><B>Email</B>: xltx_youxiang@qq.com or  linyuli@stu.pku.edu.cn</P>
+      <P><B>Email</B>: xltx_youxiang@qq.com or linyuli@stu.pku.edu.cn</P>
 
       <H2>General</H2>
       <P>
         I am currently a Ph.D. candidate at the School of Computer Science, Peking University, pursuing a doctoral
-        degree in Computer Science and Technology. My Ph.D. advisor is Professor <A href="https://scholar.google.com/citations?user=ZC7SObAAAAAJ&hl=zh-CN">Jin Zhi</A>. Prior to this, I completed a three - year postgraduate program at Yunnan University, obtaining my master's degree under the supervision of Professor Xuan Zhang.
-      </br></P>
+        degree in Computer Science and Technology. My Ph.D. advisor is Professor <A
+          href="https://scholar.google.com/citations?user=ZC7SObAAAAAJ&hl=zh-CN">Jin Zhi</A>. Prior to this, I completed
+        a three - year postgraduate program at Yunnan University, obtaining my master's degree under the supervision of
+        Professor Xuan Zhang.
+        </br></P>
 
-      <P>  My research interests mainly revolve around utilizing deep learning to address various issues related to
+      <P> My research interests mainly revolve around utilizing deep learning to address various issues related to
         knowledge graphs. This includes knowledge graph completion, multimodal knowledge graphs, and various downstream
         applications of knowledge graphs (AI-4-Science). Additionally, I am also interested in requirements engineering
         in software engineering.</br></P>
 
-      <P>  In my personal life, I enjoy fitness, soccer, and other sports. I aspire to become a university assistant
+      <P> In my personal life, I enjoy fitness, soccer, and other sports. I aspire to become a university assistant
         professor after completing my Ph.D. You can find more information about me on platforms such as <A
           href="https://www.researchgate.net/profile/Linyu-Li-9?_sg=xhcZvM9qZ_NoNkzoJTjT49WuItPoJ2XE86zJ2b-5bO8Z7xAeoeXzcET4zT7VZ8ankfmzfe8A5IqDWRA&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">Researchgate</A>
         and <A href="https://orcid.org/0009-0005-8626-0608">ORCID</A>.</P>
@@ -96,35 +109,14 @@
       <P>Knowledge Graph Completion/Representation Learning、 Applications of Knowledge Graphs、 Deep Learning and
         requirements Engineering.</P>
 
-        <!-- ===== News Ticker ===== -->
-        <H2>News:</H2>
-        <div class="news-section">
-          <div class="news-title">News:</div>
-        
-          <!-- 左侧轨道 & 把手 -->
-          <div class="news-track">
-            <div class="news-handle" id="newsHandle"></div>
-          </div>
-        
-          <!-- 滚动内容区（保持原样） -->
-          
-          <div class="news-scroll" id="newsScroll">
-            <div class="news-list">
-              <div class="news-item">
-                <span class="date">[2025.08]</span> One paper has been accepted by Expert Systems With Applications (ESWA).
-              </div>
-            </div>
-          </div>
-          <a href="#" class="news-more" id="newsToggle">MORE</a>
-        </div>
-        
 
-        
 
-        
 
-        
-        
+
+
+
+
+
 
 
       <H2>Selected Publications [<A href="https://scholar.google.com/citations?user=i8vyw3QAAAAJ&hl=zh-CN&oi=sra">Full
@@ -144,7 +136,7 @@
             <I>IEEE Transactions on Multimedia 2025 (SCI,JCR Q1 Top, CCF-B, IF: 8.6).</I><BR>
           </P>
         </LI>
-      </UL> 	
+      </UL>
       <UL>
         <LI>
           <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Yichi Zhang, Haoran Duan,Xuan Zhang, Nyima Tashi.
@@ -154,17 +146,17 @@
         </LI>
       </UL>
       <UL>
-          <LI>
-            <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Haoran Duan, Zhengwei Tao, Xuan Zhang, Jiandong Li.
-              Rethinking Regularization Methods for Knowledge Graph Completion.<BR>
-              <I>ArXiv preprint 2025.</I><BR>
-            </P>
-          </LI>
-        </UL>
-      
-     
+        <LI>
+          <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Haoran Duan, Zhengwei Tao, Xuan Zhang, Jiandong Li.
+            Rethinking Regularization Methods for Knowledge Graph Completion.<BR>
+            <I>ArXiv preprint 2025.</I><BR>
+          </P>
+        </LI>
+      </UL>
+
+
       <UL>
-         	
+
         <LI>
           <P><B>LinYu Li,</B> Xuan Zhang*, YuBin Ma, Chen Gao, JiShu Wang, Yong Yu, Zihao Yuan, QiuYing Ma.
             A knowledge graph completion model based on contrastive learning and relation enhancement method.<BR>
@@ -182,12 +174,12 @@
       </UL>
       <!-- <UL> -->
       <UL>
-          <LI>
-            <P>HaoRan Duan, Cheng Xie*, <B>LinYu Li</B>.
-              Reserving-Masking-Reconstruction Model for Self-Supervised Heterogeneous Graph Representation<BR>
-              <I>Proceedings of the 30th ACM SIGKDD Conference 2024 (CCF A)</I><BR>
-            </P>
-          </LI>
+        <LI>
+          <P>HaoRan Duan, Cheng Xie*, <B>LinYu Li</B>.
+            Reserving-Masking-Reconstruction Model for Self-Supervised Heterogeneous Graph Representation<BR>
+            <I>Proceedings of the 30th ACM SIGKDD Conference 2024 (CCF A)</I><BR>
+          </P>
+        </LI>
       </UL>
       <UL>
         <LI>
@@ -205,7 +197,7 @@
         <!-- <li><B>Conference PC Member/Reviewer</B>: AAAI, IJCAI, ACL, EMNLP, ECML-PKDD. </li> -->
         <!-- <li><B>Journal Reviewer</B>:\n -->
         Reviewer for AAAI 2026, CVPR 2026, ICASSP 2026, ICME 2026 <br />
-        Reviewer for NeurIPS 2025, ACM MM 2025, ICLR 2025,  ICME 2025,  ACM Multimedia Asia 2025,  IJCNN 2025 <br />
+        Reviewer for NeurIPS 2025, ACM MM 2025, ICLR 2025, ICME 2025, ACM Multimedia Asia 2025, IJCNN 2025 <br />
         Reviewer for NeurIPS 2024 Workshop <br />
         Reviewer for Artificial Intelligence (AI) <br />
         Reviewer for Knowledge-Based Systems (KBS) <br />
@@ -254,7 +246,11 @@
         <div style="float:left;">Outstanding Graduate of Yunnan University.</div>
         <div style="float:right;">2024</div>
       </div>
-
+      <H2>Internship Experience</H2>
+      <div style="overflow:hidden;margin-bottom: 0.6em">
+        <div style="float:left;">HUAWEI 2012 LAB</div>
+        <div style="float:right;">2025.11 - Present</div>
+      </div>
       <H2>Invited Talks</H2>
       <div style="overflow:hidden;margin-bottom: 0.6em">
         <div style="float:left;"><strong>Presented at the NCIIP Conference</strong> </div>
@@ -277,104 +273,19 @@
 
       <!-- <a href="https://hits.seeyoufarm.com"><img
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F2391134843.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" /></a> -->
-      <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2F2391134843.github.io%2F&label=&icon=github&color=%23198754">
+      <img
+        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2F2391134843.github.io%2F&label=&icon=github&color=%23198754">
 
-        </br><I>last update: 2025-9</I>
+      </br><I>last update: 2025-12</I>
       <!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fyao8839836.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
 
     </DIV>
   </DIV>
 
-  <script>
-    (function(){
-      var box    = document.getElementById('newsScroll');
-      var handle = document.getElementById('newsHandle');
-      var track  = handle.parentElement;
-      var link   = document.getElementById('newsToggle');
-      var expanded = false;
-    
-      /* ===== ① 根据内容高度动态设置把手长度 ===== */
-      function updateHandle(){
-        var ratio = box.clientHeight / box.scrollHeight;
-        /* 最短 25px，最长接近轨道 */
-        var h = Math.max(track.clientHeight * ratio, 25);
-        handle.style.height = h + 'px';
-        updateHandlePos();           // 同步位置
-      }
-    
-      /* ===== ② 滚动内容时同步把手位置 ===== */
-      function updateHandlePos(){
-        var maxScroll = box.scrollHeight - box.clientHeight;
-        var maxMove   = track.clientHeight - handle.offsetHeight;
-        var top = (box.scrollTop / maxScroll) * maxMove;
-        handle.style.top = top + 'px';
-      }
-    
-      box.addEventListener('scroll', updateHandlePos, false);
-      window.addEventListener('resize', updateHandle, false);
-    
-      /* ===== ③ 拖动把手滚动内容 ===== */
-      let startY, startTop, dragging=false;
-    
-      function onDragStart(e){
-        dragging = true;
-        handle.classList.add('dragging');
-        startY = (e.touches ? e.touches[0].clientY : e.clientY);
-        startTop = parseFloat(handle.style.top) || 0;
-        e.preventDefault();
-      }
-      function onDragMove(e){
-        if(!dragging) return;
-        var y = (e.touches ? e.touches[0].clientY : e.clientY);
-        var delta = y - startY;
-        var maxMove = track.clientHeight - handle.offsetHeight;
-        var newTop = Math.min(Math.max(startTop + delta, 0), maxMove);
-        handle.style.top = newTop + 'px';
-    
-        /* 同步内容滚动 */
-        var ratio = newTop / maxMove;
-        var maxScroll = box.scrollHeight - box.clientHeight;
-        box.scrollTop = ratio * maxScroll;
-      }
-      function onDragEnd(){
-        dragging = false;
-        handle.classList.remove('dragging');
-      }
-    
-      handle.addEventListener('mousedown', onDragStart, false);
-      document.addEventListener('mousemove',  onDragMove, false);
-      document.addEventListener('mouseup',    onDragEnd,  false);
-    
-      handle.addEventListener('touchstart', onDragStart, {passive:false});
-      document.addEventListener('touchmove',  onDragMove, {passive:false});
-      document.addEventListener('touchend',   onDragEnd,  false);
-    
-      /* ===== ④ MORE/LESS 展开收起逻辑（与上次一致） ===== */
-      link.addEventListener('click', function(e){
-        e.preventDefault();
-        expanded = !expanded;
-        if(expanded){
-          box.classList.add('expanded');
-          box.style.maxHeight = 'none';
-          link.innerHTML = 'LESS';
-        }else{
-          box.classList.remove('expanded');
-          box.style.maxHeight = '210px';
-          link.innerHTML = 'MORE';
-          box.scrollTo({top:0, behavior:'smooth'});
-        }
-        /* 内容高度变了，需重新计算把手 */
-        updateHandle();
-      });
-    
-      /* ===== 初始化 ===== */
-      updateHandle();
-    })();
-    </script>
-    
-    
-    
+
+
+
 </BODY>
 
-  
+
 </HTML>
