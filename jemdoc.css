@@ -262,6 +262,9 @@ div#toptitle h1 {
 #layout-content div#toptitle h1 {
 	padding-top: 0px; padding-bottom: 0.1em; margin-top: 0.5em; margin-bottom: 0em; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
 }
+.news-date{
+	font-weight: 700;
+   }   
 img.eq {
 	margin: 0px; padding: 0px 0.1em;
 }

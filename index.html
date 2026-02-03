@@ -61,6 +61,42 @@
     .news-handle.dragging {
       background: #6c8dff;
     }
+
+    /* ===== News Module Styles ===== */
+    .news-container {
+      margin: 5px 0 15px 0;
+      padding: 0;
+    }
+
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-list li {
+      padding: 1px 0;
+      line-height: 1.4;
+      color: #333;
+      font-size: 0.92em;
+    }
+
+    .news-more {
+      display: none;
+    }
+
+    .news-toggle {
+      display: inline-block;
+      margin-top: 5px;
+      color: #224b8d;
+      cursor: pointer;
+      font-size: 0.88em;
+      font-weight: 500;
+    }
+
+    .news-toggle:hover {
+      text-decoration: underline;
+    }
   </style>
 
   <!-- ===== Static News – drag-to-scroll ===== -->
@@ -109,18 +145,41 @@
       <P>Knowledge Graph Completion/Representation Learning、 Applications of Knowledge Graphs、 Deep Learning and
         requirements Engineering.</P>
 
+      <!-- ===== News Module ===== -->
+      <H2>News</H2>
+      <div class="news-container">
+        <ul class="news-list" id="news-default">
+          <li><span class="news-date">[2026.01]</span> One paper has been accepted by TheWebConf (WWW'2026).</li>
+          <li><span class="news-date">[2026.01]</span> One paper has been accepted by ICASSP'2026.</li>
+          <li><span class="news-date">[2026.01]</span> One paper has been accepted by Computers and Electronics in
+            Agriculture (COMPAG).</li>
+        </ul>
 
-
-
-
-
-
-
-
+        <!-- <div class="news-more" id="news-more">
+          <ul class="news-list">
+            <li>[2024.12] One paper has been accepted by AAAI 2025.</li>
+            <li>[2024.08] One paper has been accepted by KDD 2024.</li>
+            <li>[2024.06] One paper has been accepted by ACM MM 2024.</li>
+            <li>[2024.03] One paper has been accepted by CVPR 2024.</li>
+          </ul>
+        </div> -->
+        <span class="news-toggle" id="news-toggle" onclick="toggleNews()">[Show More]</span>
+      </div>
+      <!-- ===== End News Module ===== -->
 
 
       <H2>Selected Publications [<A href="https://scholar.google.com/citations?user=i8vyw3QAAAAJ&hl=zh-CN&oi=sra">Full
           List</A>]</H2>
+
+
+      <UL>
+        <LI>
+          <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Yichi Zhang, Haoran Duan,Xuan Zhang, Nyima Tashi.
+            Learning to Evolve: Bayesian-Guided Continual Knowledge Graph Embedding.<BR>
+            <I>The Web Conference (WWW'2026 CCF-A ).</I><BR>
+          </P>
+        </LI>
+      </UL>
       <UL>
         <LI>
           <P><B>LinYu Li,</B> Zhi Jin*, Xuan Zhang, Haoran Duan, Jishu Wang, Zhengwei Tao, Haiyan Zhao, Xiaofeng Zhu.
@@ -137,14 +196,7 @@
           </P>
         </LI>
       </UL>
-      <UL>
-        <LI>
-          <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Yichi Zhang, Haoran Duan,Xuan Zhang, Nyima Tashi.
-            Learning to Evolve: Bayesian-Guided Continual Knowledge Graph Embedding.<BR>
-            <I>ArXiv preprint 2025.</I><BR>
-          </P>
-        </LI>
-      </UL>
+
       <UL>
         <LI>
           <P><B>LinYu Li,</B> Zhi Jin*, Yuanpeng He, Dongming Jin, Haoran Duan, Zhengwei Tao, Xuan Zhang, Jiandong Li.
@@ -249,7 +301,7 @@
       <H2>Internship Experience</H2>
       <div style="overflow:hidden;margin-bottom: 0.6em">
         <div style="float:left;">HUAWEI 2012 LAB</div>
-        <div style="float:right;">2025.10 - Present</div>
+        <div style="float:right;">2025.10 - 2026.01</div>
       </div>
       <H2>Invited Talks</H2>
       <div style="overflow:hidden;margin-bottom: 0.6em">
@@ -276,14 +328,29 @@
       <img
         src="https://hitscounter.dev/api/hit?url=https%3A%2F%2F2391134843.github.io%2F&label=&icon=github&color=%23198754">
 
-      </br><I>last update: 2025-12</I>
+      </br><I>last update: 2026-1</I>
       <!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fyao8839836.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
 
     </DIV>
   </DIV>
 
-
-
+  <!-- News Toggle Script -->
+  <script>
+    var newsExpanded = false;
+    function toggleNews() {
+      var moreNews = document.getElementById('news-more');
+      var toggleBtn = document.getElementById('news-toggle');
+      if (newsExpanded) {
+        moreNews.style.display = 'none';
+        toggleBtn.textContent = '[Show More]';
+        newsExpanded = false;
+      } else {
+        moreNews.style.display = 'block';
+        toggleBtn.textContent = '[Show Less]';
+        newsExpanded = true;
+      }
+    }
+  </script>
 
 </BODY>
 
