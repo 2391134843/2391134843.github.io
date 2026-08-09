@@ -142,43 +142,57 @@
       <P>Knowledge Graph Completion/Representation Learning、 Applications of Knowledge Graphs、 Deep Learning and
         requirements Engineering.</P>
 
-      <!-- ===== News Module ===== -->
-      <H2>News</H2>
-      <div class="news-container">
-        <ul class="news-list" id="news-default">
-          <li><span class="news-date">[2026.07]</span> One paper has been accepted by IEEE/ACM Transactions on Audio,
-              Speech, and Language Processing (TASLP).</li>
-          <li><span class="news-date">[2026.07]</span> One paper has been accepted by ACM International Conference on
-              Multimedia (ACM MM 2026).</li>
-          <li><span class="news-date">[2026.06]</span> We released <A
-              href="https://arxiv.org/abs/2606.08982">Baichuan-M4</A>, a clinical-grade medical agent system for
-            continuous care.</li>
-          <li><span class="news-date">[2026.05]</span> One paper has been accepted by Requirements Engineering 2026
-            (RE).</li>
-          <li><span class="news-date">[2026.04]</span> One paper has been accepted by IEEE Transactions on Knowledge and
-            Data Engineering (TKDE).</li>
-          <li><span class="news-date">[2026.03]</span> One paper has been accepted by ACM Transactions on Knowledge
-            Discovery from Data (TKDD).</li>
-          <li><span class="news-date">[2026.02]</span> One paper has been accepted by Pattern Recognition (PR).</li>
-          <li><span class="news-date">[2026.02]</span> One paper has been accepted by Engineering Applications of
-            Artificial Intelligence (EAAI).</li>
-          <li><span class="news-date">[2026.01]</span> One paper has been accepted by TheWebConf (WWW'2026 Oral).</li>
-          <li><span class="news-date">[2026.01]</span> One paper has been accepted by ICASSP'2026.</li>
-          <li><span class="news-date">[2026.01]</span> One paper has been accepted by Computers and Electronics in
-            Agriculture (COMPAG).</li>
-        </ul>
+<!-- ===== News Module ===== -->
+<H2>News</H2>
+<div class="news-container">
+  <!-- 默认展示最新的 8 条 -->
+  <ul class="news-list" id="news-default">
+    <li><span class="news-date">[2026.08]</span> One paper has been accepted by IEEE Transactions on Software
+      Engineering (TSE).</li>
+    <li><span class="news-date">[2026.07]</span> One paper has been accepted by IEEE/ACM Transactions on Audio,
+      Speech, and Language Processing (TASLP).</li>
+    <li><span class="news-date">[2026.07]</span> One paper has been accepted by ACM International Conference on
+      Multimedia (ACM MM 2026).</li>
+    <li><span class="news-date">[2026.06]</span> We released <A
+        href="https://arxiv.org/abs/2606.08982">Baichuan-M4</A>, a clinical-grade medical agent system for
+      continuous care.</li>
+    <li><span class="news-date">[2026.05]</span> One paper has been accepted by Requirements Engineering 2026
+      (RE).</li>
+    <li><span class="news-date">[2026.04]</span> One paper has been accepted by IEEE Transactions on Knowledge and
+      Data Engineering (TKDE).</li>
+    <li><span class="news-date">[2026.03]</span> One paper has been accepted by ACM Transactions on Knowledge
+      Discovery from Data (TKDD).</li>
+    <li><span class="news-date">[2026.02]</span> One paper has been accepted by Pattern Recognition (PR).</li>
+  </ul>
 
-        <!-- <div class="news-more" id="news-more">
-          <ul class="news-list">
-            <li>[2024.12] One paper has been accepted by AAAI 2025.</li>
-            <li>[2024.08] One paper has been accepted by KDD 2024.</li>
-            <li>[2024.06] One paper has been accepted by ACM MM 2024.</li>
-            <li>[2024.03] One paper has been accepted by CVPR 2024.</li>
-          </ul>
-        </div> -->
-        <span class="news-toggle" id="news-toggle" onclick="toggleNews()">[Show More]</span>
-      </div>
-      <!-- ===== End News Module ===== -->
+  <!-- 点击 Show More 后展示其余内容 -->
+  <div class="news-more" id="news-more" style="display: none;">
+    <ul class="news-list">
+      <li><span class="news-date">[2026.02]</span> One paper has been accepted by Engineering Applications of
+        Artificial Intelligence (EAAI).</li>
+      <li><span class="news-date">[2026.01]</span> One paper has been accepted by The Web Conference 2026
+        (WWW 2026 Oral).</li>
+      <li><span class="news-date">[2026.01]</span> One paper has been accepted by IEEE International Conference on
+        Acoustics, Speech and Signal Processing (ICASSP 2026).</li>
+      <li><span class="news-date">[2026.01]</span> One paper has been accepted by Computers and Electronics in
+        Agriculture (COMPAG).</li>
+    </ul>
+  </div>
+
+  <span class="news-toggle" id="news-toggle" onclick="toggleNews()">[Show More]</span>
+</div>
+<!-- ===== End News Module ===== -->
+
+<script>
+  function toggleNews() {
+    const moreNews = document.getElementById("news-more");
+    const toggleButton = document.getElementById("news-toggle");
+    const isHidden = moreNews.style.display === "none";
+
+    moreNews.style.display = isHidden ? "block" : "none";
+    toggleButton.textContent = isHidden ? "[Show Less]" : "[Show More]";
+  }
+</script>
 
 
       <H2>Selected Publications [<A href="https://scholar.google.com/citations?user=i8vyw3QAAAAJ&hl=zh-CN&oi=sra">Full
